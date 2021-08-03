@@ -18,6 +18,7 @@ jobs:
     - name: installa chrome e jq
       run: |-
         sudo apt-get install -y jq
+        sudo apt-get install -y xq
         sudo apt-get install -y libappindicator1 fonts-liberation
         sudo apt-get -f install
         wget http://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
