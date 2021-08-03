@@ -18,6 +18,12 @@ jobs:
     - name: installa chrome e jq
       run: |-
         sudo apt-get install -y jq
+
+        mkdir -p ~/bin
+        cp bin/mlr ~/bin
+        cp bin/scrape ~/bin
+        cd ~/bin
+        chmod +x mlr
         
         sudo apt-get install -y libappindicator1 fonts-liberation
         sudo apt-get -f install
