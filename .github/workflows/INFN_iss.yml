@@ -25,6 +25,7 @@ jobs:
 
     - name: miller
       run: |-
+        sudo apt-get install dos2unix
         mkdir -p ~/bin
         cp bin/mlr ~/bin
         cd ~/bin
