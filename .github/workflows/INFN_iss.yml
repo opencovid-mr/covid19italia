@@ -18,17 +18,18 @@ jobs:
     - name: installa chrome e jq
       run: |-
         sudo apt-get install -y jq
-
-        mkdir -p ~/bin
-        cp bin/mlr ~/bin
-        cp bin/scrape ~/bin
-        cd ~/bin
-        chmod +x mlr
-        
         sudo apt-get install -y libappindicator1 fonts-liberation
         sudo apt-get -f install
         wget http://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         sudo dpkg -i google-chrome*.deb
+
+    - name: miller
+      run: |-
+        mkdir -p ~/bin
+        cp bin/mlr ~/bin
+        cd ~/bin
+        chmod +x mlr
+
     - name: esegui script
       run: |-
         cd ./webservices/INFN_iss
