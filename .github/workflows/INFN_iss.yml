@@ -31,6 +31,8 @@ jobs:
         cd ~/bin
         chmod +x mlr
 
+        sudo apt-get install miller
+
     - name: esegui script
       run: |-
         cd ./webservices/INFN_iss
